@@ -1,4 +1,45 @@
-# Getting Started with Create React App
+# React
+
+Curso DIO.me para desenvolvimento em typescript e React.js + Next.js
+
+## Instruções
+
+### Nodejs
+
+### Instalar typescript e comandos basicos
+
+
+
+### Inicializando:
+
+```bash
+    npm i -g create-react-app # instalando react-create-app
+
+    npx create-react-app my-app # criando aplicativo react (com js puro)
+    # OU
+    npx create-react-app my-app-ts --template typescript # criando aplicativo react para typescript
+    cd my-app/
+    npm start # iniciando servidor que hospeda aplicação
+
+```
+
+Todo componente é uma função que retorna um código em HTML
+
+### Instalando styled components
+
+No react, podemos estilizar os componentes externamente com arquivos css separados ou podemos usar o `styled-components`:
+
+```bash
+    npm i styled-components
+    npm i --save-dev @types/styled-components # save dev pois como eh um tipo, a dependencia eh so durante o desenvolvimento
+```
+
+### Chakra UI
+
+
+---
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
