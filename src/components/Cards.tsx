@@ -1,6 +1,7 @@
 interface DioCard {
     id: number,
-    data : string
+    data : string,
+    event: () => {}
 }
 
 export const Cards = ( {id, data} : DioCard) => { // pasando o parametro id da interface DioCard

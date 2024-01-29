@@ -36,6 +36,16 @@ No react, podemos estilizar os componentes externamente com arquivos css separad
 
 ### Chakra UI
 
+## Testes automatizados
+
+JEST já é instalado quando utilizamos `npx create-react-app`. Criamos a pasta `services/` dentro da src para fazermos os testes. Incluir os testes no formato do arquivo lá existente. Para executar:
+
+```bash
+    npm test
+
+```
+
+### TDD - Desenvolvimento Orientado a Testes 
 
 ---
 
