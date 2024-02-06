@@ -1,4 +1,4 @@
-import { Box, Center, ChakraProvider, Flex } from "@chakra-ui/react"
+import { Box, Center,  Flex } from "@chakra-ui/react"
 import { Layout } from "../components/Layout"
 import { UserAuthentication } from "../components/UserAuthentication"
 import { GridComponent } from "../components/GridPlaying"

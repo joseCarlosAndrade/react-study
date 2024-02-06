@@ -29,7 +29,7 @@ export const GridComponent = () => {
         <GridItem colStart ={5} colEnd={7} bg='red' color='white'>col 5 e 7</GridItem>
       </Grid>
 
-      // usando template areas 
+      
 
       <Grid padding='2' templateAreas={`
       "header header header"

@@ -1,4 +1,4 @@
-import { fetchMyAPI, Account } from "./apiSimulator";
+import { fetchMyAPI } from "./apiSimulator";
 
 export const login = () => {
     
