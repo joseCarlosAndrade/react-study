@@ -1,6 +1,6 @@
 {
-  "homepage": "http://josecarlosandrade.github.io/react-study",
-  "name": "my-app-ts",
+  "homepage": ".",
+  "name": "react-study",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
