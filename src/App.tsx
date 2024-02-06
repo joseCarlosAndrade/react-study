@@ -29,7 +29,7 @@ function App() {
 
   // passando todo este componente como argumento no layout
   <>  
-    <BrowserRouter basename='{process.env.PUBLIC_URL}'>
+    <BrowserRouter>
       <ChakraProvider>
         <Routes>
           <Route path='/' element={
