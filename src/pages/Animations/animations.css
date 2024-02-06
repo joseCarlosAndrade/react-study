@@ -1,0 +1,169 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-btn {
+    /* position: absolute; */
+
+    /* top: 100px; */
+    margin-top: 100px;
+    padding: 1rem 2rem;
+    background-color: rgb(111, 227, 189);
+    font-size: x-large;
+    color: rgb(74, 110, 87);
+    font-weight: 600;
+
+    border: 8px solid rgb(74, 110, 87);
+    border-radius: 15px;
+
+    /* transition properties */
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out; /* acceleration curve*/
+    transition-delay: 0s; /* delay before the transition is applied*/
+    
+    /* shorthand for everything above, including the background color: */
+
+    transition: transform 0.3s ease-in-out 0s, background-color 0.3s, color 0.3s;
+
+    /* or */
+    transition: all 0.3s ease-in-out;
+}
+
+.container-btn:hover {
+    transform: translateY(-10px);
+    background-color: rgb(74, 110, 87);
+    color: rgb(111, 227, 189);
+}
+
+/* Animation */
+/* Utlility classes */
+.animate {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* double classes, only allow to use these utility classes if .animate class is also part of the classname*/
+.animate.animate--infinite {
+    animation-iteration-count: infinite;
+}
+
+.animate.animate--delay-1s {
+    animation-delay: 1s;
+}
+
+.animate.animate--fast {
+    animation-duration: 0.6s;
+}
+
+.animate.animate--slow {
+    animation-duration: 3s;
+}
+
+/* syntax: name of animation */
+@keyframes slideInLeft {
+    /* beginning,  0% */
+    from {
+        transform: translateX(-300px);
+    }
+
+    /* ending 100% */
+    to{
+        transform: translateX(0px);
+    }    
+}
+
+.container-h1 {
+    margin-top: 50px;
+    font-size: 3rem;
+    font-weight: 600;
+
+    
+}
+
+.slideInLeft {
+    animation-name: slideInLeft; /*kleyframe*/
+    /* animation-duration: 1s; time to complete one cycle, from 0 to 100% */
+    animation-timing-function: ease-in-out; /*acceleration curve
+    /* animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal; run normally or in reverse 
+    animation-fill-mode: forwards; forwards, backwards, both, none */
+
+    /* replace all of that by just animation */
+    /* animation: slideInLeft 1s ease-in-out 0s 1 normal forwards; */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate;
+    animation-timing-function: ease-out;
+
+    transform-origin: 100% 120%; /* default value: center . we cant choose any axis of rotation*/
+}
+
+@keyframes rotate-bounce {
+    0% { 
+        transform: rotate(0);
+    }
+    50% { 
+        transform: rotate(390deg);
+    }
+    65% {
+        transform: rotate(350deg);
+    }
+    70%, 100% {
+        transform:rotate(360deg);
+    }
+}
+
+
+.rotate-bounce {
+    animation: rotate-bounce;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    /* animation-delay: 1s; */
+}
+
+/* animation on hover */
+
+.container-red-btn {
+    margin-top: 100px;
+    padding: 1rem 2rem;
+    background-color: rgb(201, 123, 123);
+    font-size: x-large;
+    color: rgb(139, 11, 11);
+    font-weight: 600;
+
+    border: 8px solid rgb(139, 11, 11);
+    border-radius: 15px;
+
+    transition-property: animation;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out; /* acceleration curve*/
+    transition-delay: 0s;
+
+    
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+
+
+.container-red-btn:hover {
+    animation: rotate-bounce;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+
+    
+}

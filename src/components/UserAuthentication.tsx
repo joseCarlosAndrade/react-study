@@ -1,5 +1,5 @@
 import { PasswordField } from "./PasswordField";
-import { Input, InputGroup, InputLeftAddon, Stack, Button, Center, Heading, Box, Text, background } from "@chakra-ui/react";
+import { Input, InputGroup, InputLeftAddon, Stack, Button, Center, Heading, Box, Text, background, Spinner } from "@chakra-ui/react";
 import styled from 'styled-components';
 import  React, { useState }  from 'react'
 import { useEffect } from "react";
@@ -75,7 +75,8 @@ export const UserAuthentication = () => {
                         {/* conditional rendering: */}
                     {
                        ( userData === null || userData === undefined ) ?
-                        <p>Loading..</p> :
+                        // <p>Loading..</p> :
+                        <Spinner></Spinner> :
                         <div className="gradient-text">
                             <p>{userData?.email} </p>
                             <p>{userData?.name}</p>

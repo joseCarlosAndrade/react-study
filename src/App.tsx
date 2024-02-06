@@ -3,23 +3,11 @@
 // import './App.css';
 // import { Cards } from './components/Cards';
 // import { Headers } from './components/Header/Header';
-import { Layout } from './components/Layout';
-import { PasswordField } from './components/PasswordField';
-import { GridComponent } from './components/GridPlaying';
-import { UserAuthentication } from './components/UserAuthentication'
+
 import React from 'react' // para React.Fragment, que eh o mesmo que <> </>
 
-// importando componentes para estilizaçao
-import styled from 'styled-components'
 
-// chakra ui
-import { 
-  ChakraProvider,
-  Input,
-  Center,
-  Box,
-  Flex
-} from '@chakra-ui/react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 // estilizaçao usando template string
@@ -28,7 +16,10 @@ import {
 //   border-radius: 10px;
 // `
 
-
+import {Home} from './pages/Home';
+import { Conta } from './pages/Conta';
+import { Animations} from './pages/Animations/Animations';
+import { ChakraProvider } from '@chakra-ui/react';
 
 
 function App() {
@@ -38,41 +29,24 @@ function App() {
 
   // passando todo este componente como argumento no layout
   <>  
-    <ChakraProvider>
-      <Layout>
+    <BrowserRouter>
+      <ChakraProvider>
+        <Routes>
+          <Route path='/' element={
+            <Home></Home> 
+          }/>
 
-        <Box minHeight={'50vh'} padding='10px'>
-          <Flex align='center' justify='center' minHeight='100vh'>
-            <UserAuthentication></UserAuthentication>
-          {/* <PasswordField></PasswordField> */}
-          </Flex>
-        </Box>
+        <Route path='/conta' element={
+          <Conta></Conta>
+        } />
 
-        <Center>
-          Tags centralizadas
-        </Center>
-        <GridComponent></GridComponent>
+        <Route path='/animations' element={
+          <Animations></Animations>
+        }></Route>
 
-
-        {/* Passando uma children como argumento do componente Layout: */}
-
-        {/* <h1>Faça o login</h1> */}
-
-        {/* <Box>
-          <h2> Texto dentro do styled components</h2>
-
-        </Box> */}
-
-        {/* <label htmlFor='emailInput' > Email </label>
-        <input id='emailInput' type="email" />
-
-        <label htmlFor='passwordInput' > Senha </label>
-        <input id='passwordInput' type="password" /> */}
-
-        {/* <button>Enviar</button> */}
-      
-      </Layout>
-    </ChakraProvider>
+        </Routes>
+      </ChakraProvider>
+    </BrowserRouter>
   </>
   //  ou usemos: </React.Fragment> 
   
