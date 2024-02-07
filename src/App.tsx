@@ -7,7 +7,7 @@
 import React from 'react' // para React.Fragment, que eh o mesmo que <> </>
 
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 // estilizaçao usando template string
