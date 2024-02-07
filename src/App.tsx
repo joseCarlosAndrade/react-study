@@ -29,9 +29,11 @@ function App() {
 
   // passando todo este componente como argumento no layout
   <>  
-    <BrowserRouter>
+    {/* <BrowserRouter> */}
       <ChakraProvider>
-        <Routes>
+        <Animations></Animations>
+        <Home></Home>
+        {/* <Routes>
           <Route path='/' element={
             <Home></Home> 
           }/>
@@ -44,9 +46,9 @@ function App() {
           <Animations></Animations>
         }></Route>
 
-        </Routes>
+        </Routes> */}
       </ChakraProvider>
-    </BrowserRouter>
+    {/* </BrowserRouter> */}
   </>
   //  ou usemos: </React.Fragment> 
   
